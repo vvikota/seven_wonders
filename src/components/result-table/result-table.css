@@ -1,0 +1,86 @@
+.result-table{
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.result-table h2{
+  margin-bottom: 55px;
+}
+
+.gamer-wrapper{
+  margin-bottom: 25px;
+}
+
+.gamer-main-row{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #3f51b5;
+  font-weight: bold;
+}
+
+.gamer-main-row span{
+  width: 33%;
+  pointer-events: none;
+}
+
+.gamer-main-row span:first-child{
+  text-align: left;
+}
+
+.gamer-main-row span:last-child{
+  text-align: right;
+}
+
+.gamer-more-details{
+  height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  /* width: 70%; */
+  margin-right: 0;
+  margin-left: auto;
+  align-items: flex-end;
+  transition: height 0.5s ease;
+}
+
+.gamer-wrapper.active .gamer-more-details{
+  height: 160px;
+}
+
+
+.more-details-row {
+  display: flex;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #757de8;
+  width: 80%;
+  min-width: 250px;
+}
+
+.more-details-row span{
+  width: 50%;
+  text-align: right;
+  font-size: 14px;
+}
+
+.more-details-row span:nth-child(1){
+  text-align: left;
+  width: 80%;
+}
+
+
+/* 
+.more-details-row span:nth-child(1){{} */
+
+/* .gamer-more-details{
+  text-align: left;
+} */
+
+/* .result-table button{
+  margin-top: 25px;
+  padding: 5px 10px;
+  cursor: pointer;
+  border: none;
+  color: #ffffff;
+  background-color: #3f51b5;
+} */

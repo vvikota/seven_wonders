@@ -1,0 +1,38 @@
+.start-wrapper{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-wrapper{
+  display: flex;
+  flex-direction: column;
+}
+
+.input-wrapper input{
+  margin-bottom: 10px;
+  font-size: 25px;
+}
+
+.input-wrapper button{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 3px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: red;
+  border: none;
+}
+
+.input-wrapper button:hover{
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.input-wrapper button:active,
+.input-wrapper button:focus{
+  outline: none;
+}

@@ -1,0 +1,14 @@
+.form-wrapper{
+  display: flex;
+  flex-direction: column;
+}
+
+.form-wrapper label{
+  text-align: left;
+  font-size: 12px;
+}
+
+.form-wrapper input{
+  display: block;
+  margin-bottom: 10px;
+}

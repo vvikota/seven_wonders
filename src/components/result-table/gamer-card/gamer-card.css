@@ -1,0 +1,22 @@
+.gamer-wrapper.active .gamer-more-details{
+  height: 160px;
+}
+
+.more-details-row {
+  display: flex;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #757de8;
+  width: 80%;
+  min-width: 250px;
+}
+
+.more-details-row span{
+  width: 50%;
+  text-align: right;
+  font-size: 14px;
+}
+
+.more-details-row span:nth-child(1){
+  text-align: left;
+  width: 80%;
+}

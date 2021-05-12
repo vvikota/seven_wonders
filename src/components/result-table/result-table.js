@@ -2,6 +2,7 @@ import * as React from 'react';
 import {connect} from 'react-redux';
 import './result-table.css';
 import {useState} from 'react';
+import GamerCard from './gamer-card/gamer-card'
 
 const ResultTable = ({gamers}) => {
   
@@ -15,62 +16,15 @@ const ResultTable = ({gamers}) => {
     }
 
     return <div className="result-table">
-    <h2>Результаты</h2>
+    <h2>Results</h2>
 
-    {gamers.map((gamer, index ) => {
-
-      return  <div 
-                key={index}
-                onClick={() => {setActiveTab(index)}}
-                className={`gamer-wrapper ${activeTabs[index] !== true ? '' : 'active'}`}
-              >
-
-                <div className="gamer-main-row">
-                  <span>{gamer.name}</span>
-                  <span>{gamer.city}</span>
-                  <span>{gamer.result}</span>
-                </div>
-
-                <div
-                  className="gamer-more-details"
-                >
-                  <div className="more-details-row">
-                    <span>Война:</span>
-                    <span>{gamer.war}</span>
-                  </div>
-
-                  <div className="more-details-row">
-                    <span>Монеты:</span>
-                    <span>{gamer.money}</span>
-                  </div>
-
-                  <div className="more-details-row">
-                    <span>Чудеса:</span>
-                    <span>{gamer.wonders}</span>
-                  </div>
-
-                  <div className="more-details-row">
-                    <span>Синие карты:</span>
-                    <span>{gamer.blueCards}</span>
-                  </div>
-
-                  <div className="more-details-row">
-                    <span>Зелёные карты:</span>
-                    <span>{gamer.greenCards}</span>
-                  </div>
-
-                  <div className="more-details-row">
-                    <span>Золотые карты:</span>
-                    <span>{gamer.goldCards}</span>
-                  </div>
-
-                  <div className="more-details-row">
-                    <span>Фиолетовые карты:</span>
-                    <span>{gamer.purpleCards}</span>
-                  </div>
-                </div>
-                
-              </div>
+    {gamers.map((gamer, index) => {
+      return  <GamerCard
+                gamer={gamer}
+                index={index}
+                setActiveTab={setActiveTab}
+                activeTabs={activeTabs}
+              />
     })}
   </div>
   

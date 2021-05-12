@@ -1,15 +1,18 @@
 import * as React from 'react';
 import {connect} from 'react-redux';
 import './result-table.css';
+import {useState} from 'react';
 
-class ResultTable extends React.Component {
-  constructor (props) {
-    super (props);
-    this.state = {}
-  }
-
-  render () {
-    const {gamers} = this.props;
+const ResultTable = ({gamers}) => {
+  
+    const [activeTabs, setActive] = useState(new Array(gamers.length).fill(false))
+    
+    const setActiveTab = index => {
+      const currentActiveTabs = [...activeTabs];
+      currentActiveTabs[index] = !activeTabs[index]
+      
+      setActive(currentActiveTabs)
+    }
 
     return <div className="result-table">
     <h2>Результаты</h2>
@@ -18,9 +21,8 @@ class ResultTable extends React.Component {
 
       return  <div 
                 key={index}
-                isOpen = {this.state[index]}
-                onClick={() => {this.setState({[index]: !this.state[index]}) }}
-                className={`gamer-wrapper ${this.state[index] !== true ? '' : 'active'}`}
+                onClick={() => {setActiveTab(index)}}
+                className={`gamer-wrapper ${activeTabs[index] !== true ? '' : 'active'}`}
               >
 
                 <div className="gamer-main-row">
@@ -71,7 +73,7 @@ class ResultTable extends React.Component {
               </div>
     })}
   </div>
-  }
+  
 }
 
 const mapStateToProps = (state, ownProps) => ({

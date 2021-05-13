@@ -1,3 +1,56 @@
+
+.gamer-wrapper{
+  margin-bottom: 25px;
+}
+
+.gamer-main-row{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #3f51b5;
+  font-weight: bold;
+}
+
+.gamer-main-row span{
+  pointer-events: none;
+}
+
+.gamer-main-row span:nth-child(1){
+  width: 70%;
+}
+.gamer-main-row span.gamer-points{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  font-size: 22px;
+}
+
+.gamer-city{
+  align-self: flex-end;
+  font-size: 12px;
+  font-weight: normal;
+  color: #a0a0a0;
+}
+
+.gamer-main-row span:first-child{
+  text-align: left;
+}
+
+.gamer-main-row span:last-child{
+  text-align: right;
+}
+
+.gamer-more-details{
+  height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  margin-right: 0;
+  margin-left: auto;
+  align-items: flex-end;
+  transition: height 0.5s ease;
+}
+
 .gamer-wrapper.active .gamer-more-details{
   height: 160px;
 }

@@ -12,8 +12,10 @@ const GamerCard = (props) => {
 
             <div className="gamer-main-row">
               <span>{gamer.name}</span>
-              <span>{gamer.city}</span>
-              <span>{gamer.result}</span>
+              <span className="gamer-points">
+                {gamer.result}
+                <span className="gamer-city">{gamer.city}</span>
+              </span>
             </div>
 
               <div

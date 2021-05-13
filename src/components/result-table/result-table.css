@@ -6,39 +6,3 @@
 .result-table h2{
   margin-bottom: 55px;
 }
-
-.gamer-wrapper{
-  margin-bottom: 25px;
-}
-
-.gamer-main-row{
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
-  border-bottom: 1px solid #3f51b5;
-  font-weight: bold;
-}
-
-.gamer-main-row span{
-  width: 33%;
-  pointer-events: none;
-}
-
-.gamer-main-row span:first-child{
-  text-align: left;
-}
-
-.gamer-main-row span:last-child{
-  text-align: right;
-}
-
-.gamer-more-details{
-  height: 0;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  margin-right: 0;
-  margin-left: auto;
-  align-items: flex-end;
-  transition: height 0.5s ease;
-}

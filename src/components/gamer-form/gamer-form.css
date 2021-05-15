@@ -1,4 +1,5 @@
-.form-wrapper{
+.form-wrapper,
+.form-wrapper .form-inputs{
   display: flex;
   flex-direction: column;
 }
@@ -11,4 +12,13 @@
 .form-wrapper input{
   display: block;
   margin-bottom: 10px;
+}
+
+.form-wrapper label:last-child{
+  display: none;
+}
+
+.form-wrapper button{
+  margin-top: 25px;
+  cursor: pointer;
 }

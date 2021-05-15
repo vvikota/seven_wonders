@@ -4,5 +4,17 @@
 }
 
 .result-table h2{
-  margin-bottom: 55px;
+  margin-bottom: 35px;
+}
+
+.result-table .gamer-wrapper:nth-child(2){
+  background-color: #FFD700;
+}
+
+.result-table .gamer-wrapper:nth-child(3){
+  background-color: #CD7F32;
+}
+
+.result-table .gamer-wrapper:nth-child(4){
+  background-color: #C0C0C0;
 }

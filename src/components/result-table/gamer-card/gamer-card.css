@@ -1,13 +1,14 @@
 
 .gamer-wrapper{
-  margin-bottom: 25px;
+  margin-bottom: 15px;
+  padding: 5px;
+  border-radius: 3px;
+  border: 1px solid #757de8;
 }
 
 .gamer-main-row{
   display: flex;
   justify-content: space-between;
-  margin-bottom: 10px;
-  border-bottom: 1px solid #3f51b5;
   font-weight: bold;
 }
 
@@ -29,7 +30,7 @@
   align-self: flex-end;
   font-size: 12px;
   font-weight: normal;
-  color: #a0a0a0;
+  color: #002984;
 }
 
 .gamer-main-row span:first-child{
@@ -52,7 +53,11 @@
 }
 
 .gamer-wrapper.active .gamer-more-details{
-  height: 160px;
+  height: 170px;
+}
+
+.gamer-more-details .more-details-row:first-child{
+  margin-top: 10px;
 }
 
 .more-details-row {

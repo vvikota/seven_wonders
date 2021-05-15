@@ -2,107 +2,64 @@ const mock = [
   {
     name: 'Alik',
     city: 'Gizy',
-    categoryList: [
-      {
-        categoryName: 'war',
-        points: 10
-      },  
-      {
-        categoryName: 'money',
-        points: 23
-      },  
-      {
-        categoryName: 'wonders',
-        points: 43
-      },  
-      {
-        categoryName: 'blue card',
-        points: 10
-      },  
-      {
-        categoryName: 'green card',
-        points: 3
-      },  
-      {
-        categoryName: 'gold card',
-        points: 33
-      },  
-      {
-        categoryName: 'purple card',
-        points: 12
-      },  
-    ],
-    result: 70
+    war: 1,
+    money: 2,
+    wonders: 2,
+    blueCards: 3,
+    greenCards: 5,
+    goldCards: 8,
+    purpleCards: 9,
+    resultPoints: 15
   },
   {
     name: 'Lesha',
     city: 'Babylon',
-    categoryList: [
-      {
-        categoryName: 'war',
-        points: 10
-      },  
-      {
-        categoryName: 'money',
-        points: 23
-      },  
-      {
-        categoryName: 'wonders',
-        points: 43
-      },  
-      {
-        categoryName: 'blue card',
-        points: 10
-      },  
-      {
-        categoryName: 'green card',
-        points: 3
-      },  
-      {
-        categoryName: 'gold card',
-        points: 33
-      },  
-      {
-        categoryName: 'purple card',
-        points: 12
-      },  
-    ],
-    result: 980
+    war: 1,
+    money: 2,
+    wonders: 2,
+    blueCards: 3,
+    greenCards: 5,
+    goldCards: 8,
+    purpleCards: 9,
+    resultPoints: 25
   },
   {
     name: 'Vi',
     city: 'Rhodos',
-    categoryList: [
-      {
-        categoryName: 'war',
-        points: 10
-      },  
-      {
-        categoryName: 'money',
-        points: 23
-      },  
-      {
-        categoryName: 'wonders',
-        points: 43
-      },  
-      {
-        categoryName: 'blue card',
-        points: 10
-      },  
-      {
-        categoryName: 'green card',
-        points: 3
-      },  
-      {
-        categoryName: 'gold card',
-        points: 33
-      },  
-      {
-        categoryName: 'purple card',
-        points: 12
-      },  
-    ],
-    result: 500
+    war: 1,
+    money: 2,
+    wonders: 2,
+    blueCards: 3,
+    greenCards: 5,
+    goldCards: 8,
+    purpleCards: 9,
+    resultPoints: 45
+  },
+
+  {
+    name: 'Masha',
+    city: 'Rhodos',
+    war: 1,
+    money: 2,
+    wonders: 2,
+    blueCards: 3,
+    greenCards: 5,
+    goldCards: 8,
+    purpleCards: 9,
+    resultPoints: 55
+  },
+
+  {
+    name: 'Dima',
+    city: 'Rhodos',
+    war: 1,
+    money: 2,
+    wonders: 2,
+    blueCards: 3,
+    greenCards: 5,
+    goldCards: 8,
+    purpleCards: 9,
+    resultPoints: 65
   },
 ];
 

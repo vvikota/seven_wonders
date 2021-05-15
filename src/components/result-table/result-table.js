@@ -5,13 +5,15 @@ import {useState} from 'react';
 import GamerCard from './gamer-card/gamer-card'
 
 const ResultTable = ({gamers}) => {
+
+    let sortedArray = gamers.sort((a, b) => b.resultPoints - a.resultPoints);
+    console.log(sortedArray)
   
     const [activeTabs, setActive] = useState(new Array(gamers.length).fill(false))
     
     const setActiveTab = index => {
       const currentActiveTabs = [...activeTabs];
       currentActiveTabs[index] = !activeTabs[index]
-      
       setActive(currentActiveTabs)
     }
 

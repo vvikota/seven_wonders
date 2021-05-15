@@ -9,10 +9,11 @@ import ResultTable from '../result-table/result-table'
 const StartPage = ({isEnterPoints, isShowResult}) => {
   return (
     <div className="start-wrapper">
-      {
+      {/* {
         isShowResult ? <ResultTable /> :
         isEnterPoints ?  <GamerForm /> : <StartForm /> 
-      }
+      } */}
+      <ResultTable /> 
     </div>
   )
 }

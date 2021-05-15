@@ -17,12 +17,11 @@ class GamerForm extends React.PureComponent {
   handleChange(event) {
     const area = event.target.name;
     const areaValue = event.target.value;
-    const numberValidator = /^\d{0,}$/;
 
-    if(area === 'name' || area === 'city' || areaValue.match(numberValidator)){
+    if(area === 'name' || area === 'city' || areaValue.match(/^\d{0,}$/)){
       this.setState({[area]: areaValue})
     } 
-    // console.log(area)
+
   }
 
   render() {
@@ -56,6 +55,7 @@ class GamerForm extends React.PureComponent {
     }
   
     return <div className="form-wrapper">
+      <h2 className="form-title"> Gamer </h2>
       <div className="form-inputs">
         {Object.keys(this.state).map((item ,index) => {
           let itemValue = this.state[item];

@@ -1,8 +1,11 @@
 import * as React from 'react';
 import './gamer-card.css';
+import { CamelCaseRefactor } from '../../../common/camelCaseRefactor';
 
 const GamerCard = (props) => {
-  const { gamer, index, setActiveTab, activeTabs } = props
+  const { gamer, index, setActiveTab, activeTabs } = props;
+
+  let resultKeys = Object.keys(gamer).filter(item => item !== 'name' & item !== 'city' & item !== 'resultPoints' )
 
   return  <div 
             key={index}
@@ -13,21 +16,21 @@ const GamerCard = (props) => {
             <div className="gamer-main-row">
               <span>{gamer.name}</span>
               <span className="gamer-points">
-                {gamer.result}
+                {gamer.resultPoints}
                 <span className="gamer-city">{gamer.city}</span>
               </span>
             </div>
 
-              <div
-                className="gamer-more-details"
-              >
-
-                {gamer.categoryList.map((category, index) => {
-                  return  <div className="more-details-row" key={index}>
-                            <span>{category.categoryName}:</span>
-                            <span>{category.points}</span>
-                          </div>
-                })}
+              <div className="gamer-more-details">
+                {
+                  resultKeys.map((item, index) => <>
+                      <div className="more-details-row" key={index}>
+                        <span>{CamelCaseRefactor(item)}:</span>
+                        <span>{gamer[item]}</span>
+                      </div>
+                    </>
+                  )
+                }
               </div>
           </div>
 }

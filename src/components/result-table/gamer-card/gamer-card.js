@@ -8,7 +8,6 @@ const GamerCard = (props) => {
   let resultKeys = Object.keys(gamer).filter(item => item !== 'name' & item !== 'city' & item !== 'resultPoints' )
 
   return  <div 
-            key={index}
             onClick={() => {setActiveTab(index)}}
             className={`gamer-wrapper ${activeTabs[index] !== true ? '' : 'active'}`}
           >
@@ -23,12 +22,11 @@ const GamerCard = (props) => {
 
               <div className="gamer-more-details">
                 {
-                  resultKeys.map((item, index) => <>
+                  resultKeys.map((item, index) =>
                       <div className="more-details-row" key={index}>
                         <span>{CamelCaseRefactor(item)}:</span>
                         <span>{gamer[item]}</span>
                       </div>
-                    </>
                   )
                 }
               </div>

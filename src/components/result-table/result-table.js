@@ -6,8 +6,7 @@ import GamerCard from './gamer-card/gamer-card'
 
 const ResultTable = ({gamers}) => {
 
-    let sortedArray = gamers.sort((a, b) => b.resultPoints - a.resultPoints);
-    console.log(sortedArray)
+    gamers.sort((a, b) => b.resultPoints - a.resultPoints);
   
     const [activeTabs, setActive] = useState(new Array(gamers.length).fill(false))
     
@@ -22,6 +21,7 @@ const ResultTable = ({gamers}) => {
 
     {gamers.map((gamer, index) => {
       return  <GamerCard
+                key={index}
                 gamer={gamer}
                 index={index}
                 setActiveTab={setActiveTab}

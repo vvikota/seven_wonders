@@ -39,7 +39,7 @@ class GamerForm extends React.PureComponent {
       
       let resultKeys = Object.keys(this.state).filter(item => item !== 'name' & item !== 'city')
       let resultPoints = 0;
-      resultKeys.map(item => { resultPoints = resultPoints + +this.state[item] });
+      resultKeys.map(item => { return resultPoints = resultPoints + +this.state[item] });
       
       userData.resultPoints = resultPoints;
       

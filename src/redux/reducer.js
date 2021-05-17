@@ -1,8 +1,8 @@
-import mock from '../components/mock';
+// import mock from '../components/mock';
 
 const initialState = {
   gamersCount: 0,
-  gamers: mock,
+  gamers: [],
   isEnterPoints: false,
   isShowResult: false, 
 }

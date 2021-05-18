@@ -1,24 +1,35 @@
 .form-wrapper,
-.form-wrapper .form-inputs{
+.form-wrapper .form-inputs {
   display: flex;
   flex-direction: column;
 }
 
-.form-wrapper label{
+.form-wrapper{
+  width: 80%;
+  max-width: 250px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.form-wrapper label {
   text-align: left;
   font-size: 12px;
 }
 
-.form-wrapper input{
+.form-wrapper input,
+.form-wrapper select {
   display: block;
+  width: 100%;
   margin-bottom: 10px;
+  box-sizing: border-box;
 }
 
-.form-wrapper label:last-child{
+.form-wrapper label:last-child {
   display: none;
 }
 
-.form-wrapper button{
+.form-wrapper button {
   margin-top: 25px;
   cursor: pointer;
 }

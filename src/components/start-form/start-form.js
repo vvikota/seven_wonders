@@ -25,11 +25,11 @@ class StartForm extends React.PureComponent {
     return <div className="input-wrapper">
           <input 
             type="text"
-            placeholder="Количество игроков"
+            placeholder="Number of players"
             value={inputValue}
             onChange={this.handleChange} 
           />
-          <button onClick={() => setUserCount(inputValue)}>Начать</button>
+          <button onClick={() => setUserCount(inputValue)}>Start</button>
         </div>      
   }
 }

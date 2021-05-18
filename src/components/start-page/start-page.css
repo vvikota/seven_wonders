@@ -1,20 +1,23 @@
-.start-wrapper{
+.start-wrapper {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   justify-content: center;
-  padding-top: 50px;
 }
 
-.input-wrapper{
+.input-wrapper {
   display: flex;
   flex-direction: column;
 }
 
-.input-wrapper input{
+.input-wrapper input {
   margin-bottom: 10px;
   font-size: 25px;
 }
 
-.input-wrapper button{
+.input-wrapper button {
   padding-top: 10px;
   padding-bottom: 10px;
   border-radius: 3px;
@@ -25,12 +28,12 @@
   border: none;
 }
 
-.input-wrapper button:hover{
+.input-wrapper button:hover {
   opacity: 0.8;
   cursor: pointer;
 }
 
 .input-wrapper button:active,
-.input-wrapper button:focus{
+.input-wrapper button:focus {
   outline: none;
 }

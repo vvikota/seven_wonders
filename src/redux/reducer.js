@@ -4,11 +4,10 @@ const initialState = {
   gamersCount: 0,
   gamers: [],
   isEnterPoints: false,
-  isShowResult: false, 
+  isShowResult: false,
 }
 
 const ActionCreator = {
-
   setUserCount: (count) => ({
     type: `SET_USER_COUNT`,
     payload: count,
@@ -27,40 +26,40 @@ const ActionCreator = {
   showResult: (value) => ({
     type: `SHOW_RESULT`,
     payload: value,
-  })
+  }),
 }
 
 const reducer = (state = initialState, action) => {
-  switch(action.type) {
-
-    case `SET_USER`: 
-      let refreshGamers = state.gamers;
-      refreshGamers.push(action.payload);
+  switch (action.type) {
+    case `SET_USER`:
+      let refreshGamers = state.gamers
+      refreshGamers.push(action.payload)
       return {
         ...state,
-        gamers: [...refreshGamers]
-      };
+        gamers: [...refreshGamers],
+      }
 
     case `SET_USER_COUNT`:
       return {
         ...state,
-        gamersCount: action.payload
-      };
+        gamersCount: action.payload,
+      }
 
     case `START_ENTER_POINTS`:
       return {
         ...state,
-        isEnterPoints: action.payload
-      } 
+        isEnterPoints: action.payload,
+      }
 
-    case `SHOW_RESULT`: 
+    case `SHOW_RESULT`:
       return {
         ...state,
-        isShowResult: action.payload
-      }  
+        isShowResult: action.payload,
+      }
 
-    default: return state;  
+    default:
+      return state
   }
-};
+}
 
-export { reducer, ActionCreator };
+export { reducer, ActionCreator }

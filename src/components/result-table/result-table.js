@@ -6,30 +6,32 @@ import GamerCard from './gamer-card/gamer-card'
 
 const ResultTable = ({gamers}) => {
 
-    gamers.sort((a, b) => b.resultPoints - a.resultPoints);
+  gamers.sort((a, b) => b.resultPoints - a.resultPoints);
   
-    const [activeTabs, setActive] = useState(new Array(gamers.length).fill(false))
+  const [activeTabs, setActive] = useState(new Array(gamers.length).fill(false))
     
-    const setActiveTab = index => {
-      const currentActiveTabs = [...activeTabs];
-      currentActiveTabs[index] = !activeTabs[index]
-      setActive(currentActiveTabs)
-    }
+  const setActiveTab = index => {
+    const currentActiveTabs = [...activeTabs];
+    currentActiveTabs[index] = !activeTabs[index]
+    setActive(currentActiveTabs)
+  }
 
-    return <div className="result-table">
-    <h2>Results</h2>
+  return <>
+    <div className="result-table">
+      <h2>Results</h2>
 
-    {gamers.map((gamer, index) => {
-      return  <GamerCard
-                key={index}
-                gamer={gamer}
-                index={index}
-                setActiveTab={setActiveTab}
-                activeTabs={activeTabs}
-              />
-    })}
-  </div>
-  
+      {gamers.map((gamer, index) => <>
+        <GamerCard
+          key={index}
+          gamer={gamer}
+          index={index}
+          setActiveTab={setActiveTab}
+          activeTabs={activeTabs}
+        />
+      </>
+      )}
+    </div>
+  </>
 }
 
 const mapStateToProps = (state, ownProps) => ({

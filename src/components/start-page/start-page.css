@@ -1,8 +1,4 @@
 .start-wrapper {
-  position: absolute;
-  top: 55%;
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
   justify-content: center;
 }

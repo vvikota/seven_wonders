@@ -11,13 +11,12 @@ const GamerFormSelect = (props) => {
         <option disabled value={defaultValue}>
           {defaultValue}
         </option>
-        {options.map(
-          (item, index) =>
-            itemValue !== item && (
-              <option key={index} value={item}>
-                {item}
-              </option>
-            )
+        {options.map((item, index) =>
+                        itemValue !== item && (
+                          <option key={index} value={item}>
+                            {item}
+                          </option>
+                    )
         )}
       </select>
     </label>

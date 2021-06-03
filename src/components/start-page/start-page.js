@@ -4,6 +4,9 @@ import "./start-page.css"
 import GamerForm from "../gamer-form/gamer-form"
 import StartForm from "../start-form/start-form"
 import ResultTable from "../result-table/result-table"
+import withProcessDataContainer from "../gamer-form/with-process-data.js"
+
+const GamerFormWrapped = withProcessDataContainer(GamerForm)
 
 const StartPage = ({ isEnterPoints, isShowResult }) => {
   return (
@@ -11,9 +14,9 @@ const StartPage = ({ isEnterPoints, isShowResult }) => {
       {isShowResult ? (
         <ResultTable />
       ) : isEnterPoints ? (
-        <GamerForm />
+        <GamerFormWrapped />
       ) : (
-        <div className="start-wrapper">
+        <div className="start-wrapper center-wrapper">
           <StartForm />
         </div>
       )}

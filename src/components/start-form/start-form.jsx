@@ -4,22 +4,27 @@ import { ActionCreator } from '../../redux/reducer';
 import {connect} from 'react-redux';
 import './start-form.css';
 
-const StartForm = ({setUserCount}) => {
-  const [inputValue, setInputValue] = useState('')
+const StartForm = ({setUserCount, maxPlayers}) => {
+  const [inputValue, setInputValue] = useState(2)
 
-  const setValue = (event) => {
-    setInputValue(event.target.value)
+  const getOptions = () => {
+    let content = []
+    for (let i = 2; i < maxPlayers + 1; i++){
+      content.push(<option key={i} value={i}>{i}</option>)
+    }
+    return content
   }
 
   return <> 
+    <h2>Number of players</h2>
     <div className="input-wrapper">
-      <input 
-        type="text"
-        placeholder="Number of players"
-        value={inputValue}
-        onChange={setValue} 
-        className="default-input"
-      />
+      <select 
+        onChange={(event) => setInputValue(event.target.value)}
+        className="default-select"
+      >
+        {getOptions()}
+      </select>
+
       <button
         onClick={() => setUserCount(inputValue)}
         className="default-button"
@@ -31,7 +36,10 @@ const StartForm = ({setUserCount}) => {
 
 }
 
-const mapStateToProps = (state, ownProps) => ({...ownProps})
+const mapStateToProps = (state, ownProps) => ({
+  ...ownProps,
+  maxPlayers: state.maxPlayers
+})
 
 const mapDispatchToProps = (dispatch) => ({
   setUserCount: (count) => {

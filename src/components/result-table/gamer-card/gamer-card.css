@@ -16,9 +16,6 @@
   pointer-events: none;
 }
 
-.gamer-main-row span:nth-child(1){
-  width: 70%;
-}
 .gamer-main-row span.gamer-points{
   display: flex;
   flex-direction: column;

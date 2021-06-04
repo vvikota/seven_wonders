@@ -1,10 +1,10 @@
-// import mock from '../components/mock';
-
 const initialState = {
   gamersCount: 0,
   gamers: [],
   isEnterPoints: false,
   isShowResult: false,
+  isLoading: false,
+  maxPlayers: 7
 }
 
 const ActionCreator = {
@@ -27,6 +27,10 @@ const ActionCreator = {
     type: `SHOW_RESULT`,
     payload: value,
   }),
+
+  toggleLoader: () => ({
+    type: `TOGGLE_LOADER`
+  })
 }
 
 const reducer = (state = initialState, action) => {
@@ -55,6 +59,12 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         isShowResult: action.payload,
+      }
+
+    case `TOGGLE_LOADER`:
+      return {
+        ...state,
+        isLoading: !state.isLoading
       }
 
     default:

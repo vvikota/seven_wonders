@@ -1,0 +1,16 @@
+.input-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+
+.input-wrapper input {
+  margin-bottom: 10px;
+}
+
+.input-wrapper button{
+  width: 150px;
+  margin-left: 15px;
+}

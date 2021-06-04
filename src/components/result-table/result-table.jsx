@@ -17,7 +17,7 @@ const ResultTable = ({gamers}) => {
   }
 
   return <>
-    <div className="result-table center-wrapper main-layer">
+    <div className="result-table">
       <h2>Results</h2>
 
       {gamers.map((gamer, index) => <>

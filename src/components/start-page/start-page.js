@@ -5,22 +5,17 @@ import GamerForm from "../gamer-form/gamer-form"
 import StartForm from "../start-form/start-form"
 import ResultTable from "../result-table/result-table"
 import withProcessDataContainer from "../gamer-form/with-process-data.js"
+import Loader from "../loader/loader.jsx"
 
 const GamerFormWrapped = withProcessDataContainer(GamerForm)
 
-const StartPage = ({ isEnterPoints, isShowResult }) => {
+const AppScreen = ({ isEnterPoints, isShowResult, isLoading }) => {
   return (
-    <>
-      {isShowResult ? (
-        <ResultTable />
-      ) : isEnterPoints ? (
-        <GamerFormWrapped />
-      ) : (
-        <div className="start-wrapper center-wrapper main-layer">
-          <StartForm />
-        </div>
-      )}
-    </>
+    <div className="app-wrapper">
+      {isLoading ? <Loader title={'processing...'}/> :
+      isShowResult ? <ResultTable /> :
+      isEnterPoints ? <GamerFormWrapped /> : <StartForm />}
+    </div>
   )
 }
 
@@ -28,6 +23,7 @@ const mapStateToProps = (state, ownProps) => ({
   ...ownProps,
   isEnterPoints: state.isEnterPoints,
   isShowResult: state.isShowResult,
+  isLoading: state.isLoading
 })
 
-export default connect(mapStateToProps)(StartPage)
+export default connect(mapStateToProps)(AppScreen)

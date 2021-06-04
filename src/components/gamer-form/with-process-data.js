@@ -8,7 +8,7 @@ import { StandartTemplate} from "../../common/Templates"
 
 const withProcessData = (Component) => {
   const WithProcessData = (props) => {
-    const { setUser, gamers, gamersCount, showResult, startEnterPoints } = props
+    const { setUser, gamers, gamersCount, showResult, startEnterPoints, toggleLoader } = props
     const [fields, setFieldValue] = useState(StandartTemplate)
   
     const handleChange = (event) => {
@@ -18,8 +18,15 @@ const withProcessData = (Component) => {
         setFieldValue((prevState) => ({ ...prevState, [name]: value }))
       }
     }
-  
+
     const processUserData = () => {
+      toggleLoader()
+
+      const timer = setTimeout(() => {
+        toggleLoader();
+        clearTimeout(timer)
+      }, 500)
+
       let resultKeys = Object.keys(fields).filter(
         (item) => (item !== "name") & (item !== "city")
       )
@@ -68,6 +75,10 @@ const mapDispatchToProps = (dispatch) => ({
   startEnterPoints: (value) => {
     dispatch(ActionCreator.startEnterPoints(value))
   },
+
+  toggleLoader: () => {
+    dispatch(ActionCreator.toggleLoader())
+  }
 })
 
 export default compose(

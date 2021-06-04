@@ -7,7 +7,7 @@ const GamerFormSelect = (props) => {
   return (
     <label>
       {CamelCaseRefactor(itemName)}
-      <select onChange={handleChange} value={itemValue} name={itemName}>
+      <select onChange={handleChange} value={itemValue} name={itemName} className="default-select">
         <option disabled value={defaultValue}>
           {defaultValue}
         </option>

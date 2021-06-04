@@ -16,7 +16,7 @@ const StartPage = ({ isEnterPoints, isShowResult }) => {
       ) : isEnterPoints ? (
         <GamerFormWrapped />
       ) : (
-        <div className="start-wrapper center-wrapper">
+        <div className="start-wrapper center-wrapper main-layer">
           <StartForm />
         </div>
       )}

@@ -18,8 +18,14 @@ const StartForm = ({setUserCount}) => {
         placeholder="Number of players"
         value={inputValue}
         onChange={setValue} 
+        className="default-input"
       />
-      <button onClick={() => setUserCount(inputValue)}>Start</button>
+      <button
+        onClick={() => setUserCount(inputValue)}
+        className="default-button"
+      >
+        Start
+      </button>
     </div>  
   </>
 

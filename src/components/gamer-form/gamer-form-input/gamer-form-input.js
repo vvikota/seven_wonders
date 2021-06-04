@@ -11,6 +11,7 @@ const GamerFormInput = (props) => {
         name={item}
         value={itemValue}
         onChange={handleChange}
+        className="default-input"
       />
     </label>
   )

@@ -7,6 +7,11 @@
 .form-wrapper{
   width: 80%;
   max-width: 250px;
+  padding: 25px 10px;
+}
+
+.form-wrapper .form-title{
+  margin-top: 0;
 }
 
 .form-wrapper label {

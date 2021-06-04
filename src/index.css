@@ -5,11 +5,17 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: rgb(246, 249, 248);
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',monospace;
+}
+
+.main-layer{
+  padding: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgb(3 18 15 / 15%);
 }
 
 .center-wrapper{
@@ -17,4 +23,38 @@ code {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+button.default-button  {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 3px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: red;
+  border: none;
+}
+
+button.default-button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+button.default-button:active,
+button.default-button:focus {
+  outline: none;
+}
+
+input.default-input,
+select.default-select{
+  padding: 3px 10px;
+  font-size: 25px;
+}
+
+input.default-input:focus,
+input.default-input:active,
+select.default-select:focus,
+select.default-select:active{
+  outline: none;
 }

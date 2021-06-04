@@ -8,7 +8,7 @@ const GamerForm = (props) => {
   const { fields, handleChange, processUserData } = props
 
   return (
-    <div className="form-wrapper center-wrapper">
+    <div className="form-wrapper center-wrapper main-layer">
       <h2 className="form-title"> Gamer </h2>
       <div className="form-inputs">
         {Object.keys(fields).map((item, index) => {
@@ -34,7 +34,7 @@ const GamerForm = (props) => {
         })}
       </div>
 
-      <button onClick={() => processUserData()}>Сохранить</button>
+      <button onClick={() => processUserData()} className="default-button">Save</button>
     </div>
   )
 }

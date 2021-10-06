@@ -1,0 +1,11 @@
+.default-input-label{
+  position: relative;
+}
+
+.input-error{
+  position: absolute;
+  right: 3px;
+  bottom: -3px;
+  font-size: 10px;
+  color: #F44336;
+}

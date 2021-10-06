@@ -1,10 +1,11 @@
 import * as React from "react"
 import { CamelCaseRefactor } from "../../../common/camelCaseRefactor"
+import "./gamer-form-input.css"
 
 const GamerFormInput = (props) => {
   const { item, itemValue, handleChange } = props
   return (
-    <label>
+    <label className="default-input-label">
       {CamelCaseRefactor(item)}
       <input
         type="text"
@@ -13,6 +14,9 @@ const GamerFormInput = (props) => {
         onChange={handleChange}
         className="default-input"
       />
+      <span className="input-error">
+        The field cannot be empty
+      </span>
     </label>
   )
 }

@@ -7,32 +7,6 @@ const initialState = {
   maxPlayers: 7
 }
 
-const ActionCreator = {
-  setUserCount: (count) => ({
-    type: `SET_USER_COUNT`,
-    payload: count,
-  }),
-
-  setUser: (userData) => ({
-    type: `SET_USER`,
-    payload: userData,
-  }),
-
-  startEnterPoints: (value) => ({
-    type: `START_ENTER_POINTS`,
-    payload: value,
-  }),
-
-  showResult: (value) => ({
-    type: `SHOW_RESULT`,
-    payload: value,
-  }),
-
-  toggleLoader: () => ({
-    type: `TOGGLE_LOADER`
-  })
-}
-
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case `SET_USER`:
@@ -72,4 +46,4 @@ const reducer = (state = initialState, action) => {
   }
 }
 
-export { reducer, ActionCreator }
+export default reducer

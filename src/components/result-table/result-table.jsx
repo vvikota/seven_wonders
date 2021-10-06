@@ -20,7 +20,7 @@ const ResultTable = ({gamers}) => {
     <div className="result-table">
       <h2>Results</h2>
 
-      {gamers.map((gamer, index) => <>
+      {gamers.map((gamer, index) =>
         <GamerCard
           key={index}
           gamer={gamer}
@@ -28,7 +28,6 @@ const ResultTable = ({gamers}) => {
           setActiveTab={setActiveTab}
           activeTabs={activeTabs}
         />
-      </>
       )}
     </div>
   </>

@@ -50,7 +50,7 @@
 }
 
 .gamer-wrapper.active .gamer-more-details{
-  height: 170px;
+  height: auto;
 }
 
 .gamer-more-details .more-details-row:first-child{

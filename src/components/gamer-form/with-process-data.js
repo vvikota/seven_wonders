@@ -1,6 +1,6 @@
 import * as React from "react"
 import { useState } from "react"
-import { ActionCreator } from "../../redux/reducer"
+import {setUser, showResult, startEnterPoints, toggleLoader} from "../../redux/actions"
 import { connect } from "react-redux"
 import "./gamer-form.css"
 import {compose} from "recompose";
@@ -65,19 +65,19 @@ const mapStateToProps = (state, ownProps) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   setUser: (userData) => {
-    dispatch(ActionCreator.setUser(userData))
+    dispatch(setUser(userData))
   },
 
   showResult: (value) => {
-    dispatch(ActionCreator.showResult(value))
+    dispatch(showResult(value))
   },
 
   startEnterPoints: (value) => {
-    dispatch(ActionCreator.startEnterPoints(value))
+    dispatch(startEnterPoints(value))
   },
 
   toggleLoader: () => {
-    dispatch(ActionCreator.toggleLoader())
+    dispatch(toggleLoader())
   }
 })
 

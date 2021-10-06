@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {useState} from 'react';
-import { ActionCreator } from '../../redux/reducer';
+import {setUserCount, startEnterPoints} from "../../redux/actions"
 import {connect} from 'react-redux';
 import './start-form.css';
 
@@ -43,8 +43,8 @@ const mapStateToProps = (state, ownProps) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   setUserCount: (count) => {
-    dispatch(ActionCreator.setUserCount(count));
-    dispatch(ActionCreator.startEnterPoints(true));
+    dispatch(setUserCount(count));
+    dispatch(startEnterPoints(true));
   },
 });
 
